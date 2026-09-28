@@ -62,7 +62,7 @@ PROFILE_DIR = BASE_DIR / "faphouse-profile"
 API_HOST = "127.0.0.1"
 API_PORT = 8787
 
-KEEPALIVE_SECONDS = 10 * 60
+KEEPALIVE_SECONDS = 60
 NAVIGATION_TIMEOUT_MS = 60_000
 EXTRACTION_SETTLE_SECONDS = 15
 REQUEST_TIMEOUT_SECONDS = 120
@@ -757,7 +757,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--keepalive-minutes",
         type=float,
-        default=10.0,
+        default=1.0,
         help="idle keep-alive interval in minutes (default: 10)",
     )
     parser.add_argument(
